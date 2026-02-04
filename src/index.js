@@ -14,6 +14,10 @@ app.get('/api/users', (req, res) => {
   ])
 })
 
+app.get('/health', (req, res) => {
+  res.json({ status: 'healthy', timestamp: Date.now() })
+})
+
 app.listen(port, () => {
   console.log(`Backend running on port ${port}`)
 })
