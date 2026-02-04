@@ -14,6 +14,10 @@ app.get('/api/users', (req, res) => {
   ])
 })
 
+app.get('/api/stats', (req, res) => {
+  res.json({ totalUsers: 42 })
+})
+
 app.listen(port, () => {
   console.log(`Backend running on port ${port}`)
 })
